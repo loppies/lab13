@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Task } from './task';
@@ -7,8 +7,7 @@ import { Task } from './task';
   providedIn: 'root',
 })
 export class TaskService {
-  private http: HttpClient;
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   // public get(archived = false): Observable<Task[]> {}
 

@@ -9,7 +9,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, CommonModule, AppRoutingModule],
+  imports: [FormsModule, CommonModule, AppRoutingModule, BrowserModule],
   declarations: [AppComponent, TaskComponent, NotFoundComponent],
   bootstrap: [AppComponent],
 })
