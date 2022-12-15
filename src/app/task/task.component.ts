@@ -22,7 +22,9 @@ export class TaskComponent implements OnInit {
     newTask.deadline = this.deadline;
     newTask.completed = false;
     newTask.archived = false;
-    this.taskService.post(newTask);
+    this.taskService.post(newTask).subscribe((response) => {
+      console.log(response);
+    });
   }
 
   ngOnInit() {}

@@ -12,7 +12,6 @@ export class TaskService {
   // public get(archived = false): Observable<Task[]> {}
 
   public post(task: Task): Observable<any> {
-    console.log(task);
     return this.http.post(
       'https://lab13.zecer.wi.zut.edu.pl/api/fw46508',
       task
