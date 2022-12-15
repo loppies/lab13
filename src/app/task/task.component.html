@@ -1,1 +1,9 @@
-<p>Nowe zadanie</p>
+<br /><br />
+<div>
+  Nowe zadanie
+  <input [(ngModel)]="title" #newTitle />
+  Termin:
+  <input [(ngModel)]="deadline" type="date" />
+
+  <button type="button" (click)="addTask()">Dodaj</button>
+</div>
