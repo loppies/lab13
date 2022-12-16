@@ -5,5 +5,9 @@
   Termin:
   <input [(ngModel)]="deadline" type="date" />
 
-  <button type="button" (click)="addTask()">Dodaj</button>
+  <button type="button" (click)="addBtnClick()">Dodaj</button>
 </div>
+<br />
+<div id="newElements"></div>
+<br />
+<button type="button" (click)="archiveCompleted()">Archiwizuj wykonane</button>
