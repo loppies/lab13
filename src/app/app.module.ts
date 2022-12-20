@@ -11,11 +11,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MatTableModule } from '@angular/material/table';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import pl from '@angular/common/locales/pl';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatLuxonDateModule } from '@angular/material-luxon-adapter';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTabsModule } from '@angular/material/tabs';
 
 registerLocaleData(pl);
 
@@ -29,10 +30,11 @@ registerLocaleData(pl);
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTableModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatLuxonDateModule,
+    BrowserAnimationsModule,
+    MatTabsModule,
   ],
   declarations: [AppComponent, TaskComponent, NotFoundComponent],
   bootstrap: [AppComponent],

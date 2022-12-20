@@ -1,23 +1,24 @@
 <br /><br />
 <div>
   <mat-form-field apperance="outline">
-    <mat-label> Nowe zadanie </mat-label>
+    <mat-label class="cos"> Nowe zadanie </mat-label>
     <input matInput [(ngModel)]="title" #newTitle />
-    <mat-hint>Podaj nazwe nowego zadania</mat-hint>
+    <mat-hint class="male">Nazwa nowego zadania:</mat-hint>
   </mat-form-field>
+  &nbsp;&nbsp;&nbsp;&nbsp;
   <mat-form-field apperance="outline">
-    <mat-label>Termin:</mat-label>
+    <mat-label class="cos">Termin:</mat-label>
     <input
       matInput
       [(ngModel)]="deadline"
       type="text"
       [matDatepicker]="picker"
-      autocomplete="off"
     />
-    <mat-hint>Opcjonalna data wykonania</mat-hint>
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-hint class="male">Opcjonalna data wykonania:</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
+  &nbsp;&nbsp;&nbsp;&nbsp;
 
   <button
     mat-raised-button

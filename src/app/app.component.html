@@ -1,6 +1,14 @@
 <h1>Task Manager</h1>
 <nav mat-tab-nav-bar>
-<a mat-tab-link href="/task">Zadania</a> &nbsp;&nbsp;&nbsp;&nbsp;
-<a mat-tab-link href="/archive">Archiwum</a>
+  <a mat-tab-link [routerLink]="'/task'" [active]="activeUrl() === '/task'"
+    >Zadania</a
+  >
+  &nbsp;&nbsp;
+  <a
+    mat-tab-link
+    [routerLink]="'/archive'"
+    [active]="activeUrl() === '/archive'"
+    >Archiwum</a
+  >
 </nav>
 <router-outlet></router-outlet>
