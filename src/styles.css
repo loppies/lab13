@@ -1,1 +1,11 @@
 /* Add application styles & imports to this file! */
+@import '~@angular/material/prebuilt-themes/purple-green.css';
+
+.mat-app-background {
+  background-color: #303030;
+  color: white;
+}
+
+body {
+  font-family: -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}
