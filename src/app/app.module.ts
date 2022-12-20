@@ -8,6 +8,7 @@ import { TaskComponent } from './task/task.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserModule,
     HttpClientModule,
+    MatButtonModule,
   ],
   declarations: [AppComponent, TaskComponent, NotFoundComponent],
   bootstrap: [AppComponent],

@@ -1,3 +1,7 @@
 div {
   display: inline;
 }
+.mat-raised-button.mat-blue {
+  background-color: blueviolet;
+  color: blueviolet;
+}
