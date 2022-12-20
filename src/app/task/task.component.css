@@ -1,7 +1,10 @@
 div {
   display: inline;
 }
-.mat-raised-button.mat-blue {
+/* .mat-raised-button.mat-blue {
   background-color: blueviolet;
-  color: blueviolet;
+  color: blueviolet !important;
 }
+.mat-mdc-raised-button {
+  color: blueviolet;
+} */
