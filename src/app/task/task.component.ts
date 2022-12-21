@@ -85,11 +85,16 @@ export class TaskComponent implements OnInit {
       p.innerText = this.task[i].title;
       p.style.margin = '10px';
 
+      let div2 = document.createElement('div');
       let input = document.createElement('input');
+      let label = document.createElement('label');
+      label.innerText = 'Wykonane';
       input.type = 'checkbox';
-      input.style.position = 'absolute';
-      input.style.right = '590px';
-      input.style.marginTop = '-37px';
+      label.style.margin = '0px 0px -20px'
+      div2.style.position = 'absolute';
+      div2.style.right = '590px';
+      div2.style.marginTop = '-35px';
+      div2.style.padding = '20px 20px'
       input.id = `${this.task[i].id}`;
       input.addEventListener(
         'click',
@@ -98,6 +103,8 @@ export class TaskComponent implements OnInit {
           this.task.find((task) => task.id === parseInt(input.id))
         )
       );
+      div2.appendChild(label);
+      div2.appendChild(input);
       if (this.task[i].completed == true) {
         input.style.accentColor = '#69F0AE';
         div.style.backgroundColor = '#424242';
@@ -121,7 +128,7 @@ export class TaskComponent implements OnInit {
       }
 
       div.appendChild(p);
-      div.appendChild(input);
+      div.appendChild(div2);
 
       let mainDiv = document.getElementById('newElements');
       mainDiv.appendChild(div);
