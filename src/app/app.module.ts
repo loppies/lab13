@@ -17,6 +17,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatLuxonDateModule } from '@angular/material-luxon-adapter';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 registerLocaleData(pl);
 
@@ -35,6 +36,7 @@ registerLocaleData(pl);
     MatLuxonDateModule,
     BrowserAnimationsModule,
     MatTabsModule,
+    MatCheckboxModule,
   ],
   declarations: [AppComponent, TaskComponent, NotFoundComponent],
   bootstrap: [AppComponent],

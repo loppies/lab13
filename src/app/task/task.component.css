@@ -10,3 +10,16 @@ div {
   font-size: 10.5px;
   color: hsl(0, 1%, 70%);
 }
+
+.zadania {
+  color: #424242;
+}
+.archw {
+  color: #8b8a8a;
+  font-size: 16px;
+  padding: 12px 28px;
+}
+
+.mat-raised-button {
+  background-color: red;
+}

@@ -20,8 +20,11 @@ export class ArchiveComponent implements OnInit {
     for (let i = 0; i < this.task.length; i++) {
       let div = document.createElement('div');
       div.style.borderStyle = 'solid';
-      div.style.borderWidth = '1px';
+      div.style.borderWidth = '2px';
+      div.style.borderColor = '#424242';
       div.style.marginBottom = '25px';
+      div.style.backgroundColor = '#424242';
+      div.style.padding = '12px 28px';
       div.id = `${this.task[i].id}`;
 
       let p = document.createElement('p');
@@ -32,8 +35,13 @@ export class ArchiveComponent implements OnInit {
       button.type = 'button';
       button.innerText = 'usuń';
       button.style.position = 'absolute';
-      button.style.right = '25px';
-      button.style.marginTop = '-37px';
+      button.style.right = '590px';
+      button.style.marginTop = '-39px';
+      button.style.borderRadius = '4px';
+      button.style.backgroundColor = 'lightgreen';
+      button.style.border = '10px';
+      button.style.borderColor = 'lightgreen';
+      button.style.padding = '5px 10px';
       button.id = `${this.task[i].id}`;
       button.addEventListener('click', this.delete.bind(this, this.task[i]));
 

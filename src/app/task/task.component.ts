@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgModel } from '@angular/forms';
 import { Task } from './task';
 import { TaskService } from './task.service';
 
@@ -8,10 +9,12 @@ import { TaskService } from './task.service';
   styleUrls: ['./task.component.css'],
 })
 export class TaskComponent implements OnInit {
+  state: boolean = false;
   title?: string;
   deadline?: Date;
   retrievedData: any;
   task: Array<Task> = new Array<Task>();
+  archiwum: boolean = true;
 
   constructor(private taskService: TaskService) {}
 
@@ -42,6 +45,16 @@ export class TaskComponent implements OnInit {
     setTimeout(this.loadElements.bind(this, true), 50);
   }
 
+  isDisabled() {
+    for (let i = 0; i < this.task.length; i++) {
+      if (this.task[i].completed == true) {
+        this.archiwum = false;
+        return;
+      }
+    }
+    this.archiwum = true;
+  }
+
   private switchTaskChanged(task: Task) {
     if (task.completed == true) {
       task.completed = false;
@@ -50,6 +63,7 @@ export class TaskComponent implements OnInit {
     }
     this.taskService.put(task);
     setTimeout(this.loadElements.bind(this, true), 50);
+    setTimeout(this.isDisabled.bind(this), 100);
   }
 
   loadElementsOnSite(data: Object[], reload: boolean = false) {
@@ -61,8 +75,10 @@ export class TaskComponent implements OnInit {
     for (let i = 0; i < this.task.length; i++) {
       let div = document.createElement('div');
       div.style.borderStyle = 'solid';
-      div.style.borderWidth = '1px';
+      div.style.borderWidth = '2px';
+      div.style.borderColor = '#424242';
       div.style.marginBottom = '25px';
+      div.style.padding = '12px 28px';
       div.id = `${this.task[i].id}`;
 
       let p = document.createElement('p');
@@ -72,7 +88,7 @@ export class TaskComponent implements OnInit {
       let input = document.createElement('input');
       input.type = 'checkbox';
       input.style.position = 'absolute';
-      input.style.right = '25px';
+      input.style.right = '590px';
       input.style.marginTop = '-37px';
       input.id = `${this.task[i].id}`;
       input.addEventListener(
@@ -83,11 +99,15 @@ export class TaskComponent implements OnInit {
         )
       );
       if (this.task[i].completed == true) {
-        div.style.backgroundColor = '#ADADAD';
+        input.style.accentColor = '#69F0AE';
+        div.style.backgroundColor = '#424242';
+        div.style.color = 'white';
         input.checked = true;
+        input.style.accentColor = '#69F0AE';
       } else {
         input.checked = false;
-        div.style.backgroundColor = 'white';
+        div.style.backgroundColor = '#424242';
+        div.style.color = 'white';
       }
 
       if (this.task[i].deadline != null) {
